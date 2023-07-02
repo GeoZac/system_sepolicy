@@ -180,6 +180,10 @@ perfetto_producer(system_app)
 # allow system apps to read qemu.hw.mainkeys
 get_prop(system_app, qemu_hw_prop)
 
+# Allow performance profiling by the platform itself.
+can_profile_heap(system_app)
+can_profile_perf(system_app)
+
 ###
 ### Neverallow rules
 ###
